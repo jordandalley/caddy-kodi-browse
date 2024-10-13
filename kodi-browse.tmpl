@@ -1,0 +1,7 @@
+<html>
+<head><title>Index of {{range $i, $crumb := .Breadcrumbs}}{{html $crumb.Text}}{{if ne $i 0}}/{{end}}{{end}}</title></head>
+<body>
+<h1>Index of {{range $i, $crumb := .Breadcrumbs}}{{html $crumb.Text}}{{if ne $i 0}}/{{end}}{{end}}</h1><hr><pre><a href="../">../</a>
+{{range .Items}}<a href="{{html .Name}}">{{html .Name}}</a>                    {{.HumanModTime "02-Jan-2006 15:04"}}    {{if .IsDir}}-{{else}}{{.Size}}{{end}}
+{{end}}</pre><hr></body>
+</html>
